@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'Intro';
+  font-display: fallback;
+  src: local('~@/assets/fonts/intro/Intro Light'),
+    local('~@/assets/fonts/intro/Intro-Light'),
+    url('~@/assets/fonts/intro/Intro-Light.woff') format('woff'),
+    url('~@/assets/fonts/intro/Intro-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Intro';
+  font-display: fallback;
+  src: local('~@/assets/fonts/intro/Intro Regular'),
+    local('~@/assets/fonts/intro/Intro-Regular'),
+    url('~@/assets/fonts/intro/Intro-Regular.woff') format('woff'),
+    url('~@/assets/fonts/intro/Intro-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Intro';
+  font-display: fallback;
+  src: local('~@/assets/fonts/intro/Intro Bold'),
+    local('~@/assets/fonts/intro/Intro-Bold'),
+    url('~@/assets/fonts/intro/Intro-Bold.woff') format('woff'),
+    url('~@/assets/fonts/intro/Intro-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
