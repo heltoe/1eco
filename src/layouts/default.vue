@@ -13,12 +13,13 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import '~/assets/entry.scss';
 
 .wrapper {
   width: 100%;
   max-width: 1100px;
+  padding: 0 20px;
   margin: 0 auto;
 }
 </style>
