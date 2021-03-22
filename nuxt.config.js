@@ -1,5 +1,10 @@
+process.env.DOMAIN = process.env.DOMAIN || 'http://localhost:3000'
+
 export default {
   srcDir: 'src',
+  env: {
+    DOMAIN: process.env.DOMAIN,
+  },
   head: {
     title: '1ECO',
     htmlAttrs: {
