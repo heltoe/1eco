@@ -6,9 +6,19 @@
 
 <style lang="scss" scoped>
 .button {
-  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding: 0 30px;
+  background-color: #0f2345;
+  color: #fff;
+  font-weight: 700;
+  height: 40px;
+  border-radius: 7px;
   cursor: pointer;
-  transition: 0.3s ease-in-out;
+  box-sizing: border-box;
+  transition: 0.3s opacity ease-in-out;
   // fix select
   -webkit-touch-callout: none;
   -webkit-user-select: none;

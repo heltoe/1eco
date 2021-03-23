@@ -4,18 +4,14 @@
     <div class="content">
       <form class="block">
         <p class="title-block">Напишите нам</p>
-        <label class="label-block">
-          <p class="block__title">Фио</p>
-          <FormInput v-model="fullName" />
-        </label>
-        <label class="label-block">
-          <p class="block__title">Email</p>
-          <FormInput v-model="email" />
-        </label>
-        <label class="label-block">
-          <p class="block__title">Сообщение</p>
-          <FormInput v-model="email" />
-        </label>
+        <FormInput v-model="fullName" label="ФИО" :error="errors.fullName" />
+        <FormInput v-model="email" label="Email" :error="errors.email" />
+        <FormInput
+          v-model="email"
+          textarea
+          label="Сообщение"
+          :error="errors.email"
+        />
         <Button class="btn">Отправить</Button>
       </form>
       <div class="block">
@@ -35,7 +31,7 @@
 
 <script>
 import TitleBlock from '@/components/common/TitleBlock'
-import FormInput from '@/components/ui/BaseInput'
+import FormInput from '@/components/ui/FormInput'
 import Button from '@/components/ui/Button'
 
 export default {
@@ -43,6 +39,10 @@ export default {
   data: () => ({
     fullName: '',
     email: '',
+    errors: {
+      fullName: 'Поле обязательно',
+      email: '',
+    },
   }),
 }
 </script>
@@ -56,30 +56,31 @@ export default {
 .content {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
 }
 .block {
   display: flex;
   flex-direction: column;
+  & .form-input {
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+  }
 }
 .title-block {
   font-weight: bold;
   font-size: 20px;
   color: #253036;
-  margin-bottom: 20px;
 }
 .link-block {
   cursor: pointer;
+  color: #000;
   &:not(:first-child) {
     margin-top: 20px;
   }
 }
-.label-block {
-  display: flex;
-  flex-direction: column;
-  &:not(:first-child) {
-    margin-top: 20px;
-  }
+.block__value {
+  margin-top: 10px;
+  font-weight: 600;
 }
 .btn {
   margin-top: 20px;

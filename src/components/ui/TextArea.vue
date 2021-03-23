@@ -1,50 +1,47 @@
 <template>
-  <input
+  <textarea
     v-bind="$props"
-    class="ui-input"
-    :type="type"
-    v-on="{
-      ...$listeners,
-      input: (event) => $emit('input', event.target.value),
-    }"
+    @input="$emit('input', $event.target.value)"
+    @keydown="$emit('keydown', $event)"
+    @focus="$emit('focus', $event)"
   />
 </template>
 
 <script>
 export default {
+  name: 'Input',
   props: {
-    error: {
+    placeholder: {
       type: String,
-      default: '',
-    },
-    type: {
-      type: String,
-      default: 'text',
-    },
-    disabled: {
-      type: Boolean,
-      default: false,
+      default: 'Введите текст',
     },
     value: {
       type: String,
-      required: true,
+      default: '',
+    },
+    error: {
+      type: Boolean,
+      default: false,
     },
   },
 }
 </script>
 
 <style lang="scss" scoped>
-.ui-input {
+textarea {
   width: 100%;
   border-radius: 4px;
-  background-color: #fff;
+  background-color: #ffffff;
   border: 1px solid #cccccc;
   padding: 17px 11px 16px 18px;
   outline: none;
-  font-size: 16px;
-  font-weight: normal;
-  color: #0f2345;
   font-family: 'ProximaNova';
+  font-size: 16px;
+  color: #0f2345;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 135px;
+  max-height: 180px;
   transition: 0.3s ease-in-out;
   &::placeholder {
     font-family: 'ProximaNova';

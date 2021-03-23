@@ -7,6 +7,7 @@
         <div class="preview-file" />
         <div class="download-file">
           <p class="download-file__text">Скачать документ</p>
+          <img src="/download.svg" alt="download" class="download-file__icon" />
         </div>
       </div>
       <div class="file-element">
@@ -14,6 +15,7 @@
         <div class="preview-file" />
         <div class="download-file">
           <p class="download-file__text">Скачать документ</p>
+          <img src="/download.svg" alt="download" class="download-file__icon" />
         </div>
       </div>
       <div class="file-element">
@@ -21,6 +23,7 @@
         <div class="preview-file" />
         <div class="download-file">
           <p class="download-file__text">Скачать документ</p>
+          <img src="/download.svg" alt="download" class="download-file__icon" />
         </div>
       </div>
     </div>
@@ -75,5 +78,9 @@ export default {
   font-size: 15px;
   color: #6f9cb7;
   margin-right: 10px;
+}
+.download-file__icon {
+  width: 20px;
+  height: 20px;
 }
 </style>

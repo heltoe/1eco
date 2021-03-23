@@ -66,6 +66,7 @@ export default {
   display: flex;
   align-items: center;
   width: 100%;
+  padding: 20px 0;
 }
 .menu {
   display: flex;
