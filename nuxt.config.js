@@ -1,9 +1,11 @@
 process.env.DOMAIN = process.env.DOMAIN || 'http://localhost:3000'
+process.env.PORT = process.env.PORT || '3000'
 
 export default {
   srcDir: 'src',
   env: {
     DOMAIN: process.env.DOMAIN,
+    PORT: process.env.PORT,
   },
   head: {
     title: '1ECO',
