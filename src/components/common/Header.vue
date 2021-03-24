@@ -7,7 +7,9 @@
         :key="item.id"
         :href="item.scrollTo"
         class="link-item"
-        @click.prevent="scrollTo(item.scrollTo)"
+        @mouseenter="add($event)"
+        @mouseleave="remove($event)"
+        @click.prevent="scrollTo(item.scrollTo, $event)"
       >
         {{ item.label }}
       </a>
@@ -49,12 +51,19 @@ export default {
     ],
   }),
   methods: {
-    scrollTo(id) {
+    add(e) {
+      e.target.classList.add('active-link')
+    },
+    remove(e) {
+      e.target.classList.remove('active-link')
+    },
+    scrollTo(id, e) {
       const domElement = document.querySelector(id)
       if (process.browser && domElement) {
         VueScrollTo.scrollTo(domElement, 600, {
           offset: 0,
         })
+        this.remove(e)
       }
     },
   },
@@ -82,6 +91,7 @@ export default {
   font-weight: bold;
   transition: 0.3s ease-in-out;
   cursor: pointer;
+  outline: none;
   &:after {
     content: '';
     position: absolute;
@@ -93,11 +103,11 @@ export default {
     opacity: 0;
     transition: 0.3s ease-in-out;
   }
-  &:hover {
-    color: #0a86cc;
-    &:after {
-      opacity: 1;
-    }
+}
+.active-link {
+  color: #0a86cc;
+  &:after {
+    opacity: 1;
   }
 }
 </style>

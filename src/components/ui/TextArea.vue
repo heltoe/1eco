@@ -29,7 +29,6 @@ export default {
 
 <style lang="scss" scoped>
 textarea {
-  width: 100%;
   border-radius: 4px;
   background-color: #ffffff;
   border: 1px solid #cccccc;
@@ -38,10 +37,8 @@ textarea {
   font-family: 'ProximaNova';
   font-size: 16px;
   color: #0f2345;
-  min-width: 100%;
-  max-width: 100%;
-  min-height: 135px;
-  max-height: 180px;
+  height: 135px;
+  resize: none;
   transition: 0.3s ease-in-out;
   &::placeholder {
     font-family: 'ProximaNova';

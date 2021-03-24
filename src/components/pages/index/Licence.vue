@@ -4,7 +4,7 @@
     <div class="content">
       <div class="file-element">
         <p class="title-file">Название файла</p>
-        <div class="preview-file" />
+        <img src="/hero.jpg" class="preview-file" alt="file" />
         <div class="download-file">
           <p class="download-file__text">Скачать документ</p>
           <img src="/download.svg" alt="download" class="download-file__icon" />
@@ -12,7 +12,7 @@
       </div>
       <div class="file-element">
         <p class="title-file">Название файла</p>
-        <div class="preview-file" />
+        <img src="/hero.jpg" class="preview-file" alt="file" />
         <div class="download-file">
           <p class="download-file__text">Скачать документ</p>
           <img src="/download.svg" alt="download" class="download-file__icon" />
@@ -20,7 +20,7 @@
       </div>
       <div class="file-element">
         <p class="title-file">Название файла</p>
-        <div class="preview-file" />
+        <img src="/hero.jpg" class="preview-file" alt="file" />
         <div class="download-file">
           <p class="download-file__text">Скачать документ</p>
           <img src="/download.svg" alt="download" class="download-file__icon" />
@@ -54,6 +54,12 @@ export default {
   flex-direction: column;
   margin: 0 10px;
   width: 200px;
+  cursor: pointer;
+  &:hover {
+    .download-file__text {
+      color: #0a86cc;
+    }
+  }
 }
 .title-file {
   font-weight: bold;
@@ -65,6 +71,8 @@ export default {
   width: 100%;
   height: 200px;
   background-color: grey;
+  border-radius: 5px;
+  object-fit: cover;
 }
 .download-file {
   display: flex;
@@ -78,6 +86,7 @@ export default {
   font-size: 15px;
   color: #6f9cb7;
   margin-right: 10px;
+  transition: 0.3s color ease-in-out;
 }
 .download-file__icon {
   width: 20px;

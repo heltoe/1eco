@@ -1,12 +1,20 @@
 <template>
   <div class="index-page">
-    <Hero />
-    <div class="wrapper">
+    <BlockPage colored class="hero-block">
+      <Hero />
+    </BlockPage>
+    <BlockPage>
       <About />
+    </BlockPage>
+    <BlockPage colored>
       <Licence />
+    </BlockPage>
+    <BlockPage>
       <AutoPark />
+    </BlockPage>
+    <BlockPage colored>
       <Contacts />
-    </div>
+    </BlockPage>
     <transition name="fade">
       <img
         v-if="scrollerIsShown"
@@ -24,10 +32,18 @@ import About from '@/components/pages/index/About'
 import Licence from '@/components/pages/index/Licence'
 import AutoPark from '@/components/pages/index/AutoPark'
 import Contacts from '@/components/pages/index/Contacts'
+import BlockPage from '@/components/common/BlockPage'
 import VueScrollTo from 'vue-scrollto'
 
 export default {
-  components: { Hero, About, Licence, AutoPark, Contacts },
+  components: {
+    Hero,
+    About,
+    Licence,
+    AutoPark,
+    Contacts,
+    BlockPage,
+  },
   data: () => ({
     scrollerIsShown: false,
   }),
@@ -67,11 +83,20 @@ export default {
   height: 35px;
   cursor: pointer;
 }
-
-.wrapper {
-  width: 100%;
-  max-width: 1100px;
-  padding: 0 20px;
-  margin: 0 auto;
+.hero-block {
+  background-image: url('/hero.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
 }
 </style>

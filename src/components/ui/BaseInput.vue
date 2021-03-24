@@ -35,7 +35,6 @@ export default {
 
 <style lang="scss" scoped>
 .ui-input {
-  width: 100%;
   border-radius: 4px;
   background-color: #fff;
   border: 1px solid #cccccc;

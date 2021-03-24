@@ -1,27 +1,21 @@
 <template>
   <div class="app">
-    <div class="wrapper">
+    <BlockPage>
       <Header />
-    </div>
+    </BlockPage>
     <Nuxt />
   </div>
 </template>
 
 <script>
 import Header from '@/components/common/Header.vue'
+import BlockPage from '@/components/common/BlockPage'
 
 export default {
-  components: { Header },
+  components: { Header, BlockPage },
 }
 </script>
 
 <style lang="scss">
 @import '~/assets/entry.scss';
-
-.wrapper {
-  width: 100%;
-  max-width: 1100px;
-  padding: 0 20px;
-  margin: 0 auto;
-}
 </style>

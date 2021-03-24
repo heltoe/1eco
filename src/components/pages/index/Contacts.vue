@@ -2,17 +2,22 @@
   <div id="contacts">
     <TitleBlock>О компании</TitleBlock>
     <div class="content">
-      <form class="block">
+      <form class="block" @submit.prevent="submit">
         <p class="title-block">Напишите нам</p>
-        <FormInput v-model="fullName" label="ФИО" :error="errors.fullName" />
-        <FormInput v-model="email" label="Email" :error="errors.email" />
         <FormInput
-          v-model="email"
-          textarea
-          label="Сообщение"
-          :error="errors.email"
+          v-model="form.fullName"
+          label="ФИО*"
+          :error="errors.fullName"
+          @focus="errors.fullName = ''"
         />
-        <Button class="btn">Отправить</Button>
+        <FormInput
+          v-model="form.email"
+          label="Email*"
+          :error="errors.email"
+          @focus="errors.email = ''"
+        />
+        <FormInput v-model="form.message" textarea label="Сообщение" />
+        <Button class="btn" :disabled="isDisabled">Отправить</Button>
       </form>
       <div class="block">
         <p class="title-block">Как связаться</p>
@@ -37,13 +42,40 @@ import Button from '@/components/ui/Button'
 export default {
   components: { TitleBlock, FormInput, Button },
   data: () => ({
-    fullName: '',
-    email: '',
+    form: {
+      fullName: '',
+      email: '',
+      message: '',
+    },
     errors: {
-      fullName: 'Поле обязательно',
+      fullName: '',
       email: '',
     },
   }),
+  computed: {
+    isDisabled() {
+      return Object.values(this.errors).filter((item) => item.length).length > 0
+    },
+  },
+  methods: {
+    isErrorValidate() {
+      const requiredMessage = 'Поле обязательно к заполнению'
+      const invalidEmail = 'Введите корректный email'
+      if (!this.form.fullName.length) this.errors.fullName = requiredMessage
+      if (!this.form.email.length) this.errors.email = requiredMessage
+      if (this.form.email.length) {
+        // eslint-disable-next-line
+        const ruleEmailValue = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        if (!ruleEmailValue.test(this.form.email))
+          this.errors.email = invalidEmail
+      }
+      return Object.values(this.errors).filter((item) => item.length).length > 0
+    },
+    submit() {
+      if (this.isErrorValidate()) return
+      console.log(this.form)
+    },
+  },
 }
 </script>
 
@@ -55,16 +87,17 @@ export default {
 }
 .content {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .block {
-  display: flex;
-  flex-direction: column;
   & .form-input {
     &:not(:first-child) {
       margin-top: 20px;
     }
   }
+}
+form {
+  width: 500px;
 }
 .title-block {
   font-weight: bold;
@@ -72,15 +105,27 @@ export default {
   color: #253036;
 }
 .link-block {
+  display: flex;
+  flex-direction: column;
   cursor: pointer;
   color: #000;
   &:not(:first-child) {
     margin-top: 20px;
   }
+  &:hover {
+    .block__value {
+      color: #0a86cc;
+    }
+  }
+}
+.block__title {
+  font-size: 20px;
 }
 .block__value {
   margin-top: 10px;
   font-weight: 600;
+  transition: 0.3s color ease-in-out;
+  font-size: 20px;
 }
 .btn {
   margin-top: 20px;

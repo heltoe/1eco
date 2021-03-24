@@ -3,7 +3,15 @@
     <TitleBlock>Автропарк</TitleBlock>
     <div class="content">
       <div class="slider" />
-      <p class="text">123123123123123123</p>
+      <p class="text">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet nihil
+        blanditiis animi, deleniti molestias culpa nisi! Ipsum quod, possimus
+        ipsam quisquam placeat tempora quas ipsa dicta eveniet accusantium
+        reprehenderit totam! Lorem ipsum dolor sit, amet consectetur
+        adipisicing. Amet nihil blanditiis animi, deleniti molestias culpa nisi!
+        Ipsum quod, possimus ipsam quisquam placeat tempora quas ipsa dicta
+        eveniet accusantium reprehenderit totam!
+      </p>
     </div>
   </div>
 </template>
@@ -30,6 +38,8 @@ export default {
 .text {
   margin-left: 20px;
   max-width: 500px;
+  font-size: 16px;
+  line-height: 1.2;
 }
 .slider {
   height: 200px;
