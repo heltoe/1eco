@@ -24,7 +24,7 @@ export default {
   methods:{
     iframeHeightNotify() {
       const msg = {
-        height: this.$refs.container.offsetHeight
+        height: this.$refs.container.scrollHeight
       }
       window.parent.postMessage(msg, '*')
     },
