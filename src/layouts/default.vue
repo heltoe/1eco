@@ -1,5 +1,5 @@
 <template>
-  <div class="app">
+  <div ref="container" class="app">
     <BlockPage>
       <Header />
     </BlockPage>
@@ -15,6 +15,20 @@ import BlockPage from '@/components/common/BlockPage'
 
 export default {
   components: { Header, BlockPage, Footer },
+  mounted(){
+    this.timer = setInterval(this.iframeHeightNotify,300)
+  },
+  beforeDestroy() {
+    clearInterval(this.timer);
+  },
+  methods:{
+    iframeHeightNotify() {
+      const msg = {
+        height: this.$refs.container.offsetHeight
+      }
+      window.parent.postMessage(msg,'*')
+    }
+  }
 }
 </script>
 
