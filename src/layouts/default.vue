@@ -26,9 +26,9 @@ export default {
       const msg = {
         height: this.$refs.container.offsetHeight
       }
-      window.parent.postMessage(msg,'*')
-    }
-  }
+      window.parent.postMessage(msg, '*')
+    },
+  },
 }
 </script>
 
