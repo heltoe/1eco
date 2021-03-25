@@ -2,7 +2,7 @@
   <div id="autopark">
     <TitleBlock>Автропарк</TitleBlock>
     <div class="content">
-      <div class="slider" />
+      <Slider />
       <p class="text">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet nihil
         blanditiis animi, deleniti molestias culpa nisi! Ipsum quod, possimus
@@ -18,9 +18,10 @@
 
 <script>
 import TitleBlock from '@/components/common/TitleBlock'
+import Slider from '@/components/pages/index/auto-park/Slider'
 
 export default {
-  components: { TitleBlock },
+  components: { TitleBlock, Slider },
 }
 </script>
 

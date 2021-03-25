@@ -4,15 +4,17 @@
       <Header />
     </BlockPage>
     <Nuxt />
+    <Footer />
   </div>
 </template>
 
 <script>
 import Header from '@/components/common/Header.vue'
+import Footer from '@/components/common/Footer.vue'
 import BlockPage from '@/components/common/BlockPage'
 
 export default {
-  components: { Header, BlockPage },
+  components: { Header, BlockPage, Footer },
 }
 </script>
 

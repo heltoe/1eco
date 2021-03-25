@@ -20,7 +20,10 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
   css: [],
-  plugins: [{ src: '~/plugins/vue-scroll-to', ssr: false }],
+  plugins: [
+    { src: '~/plugins/vue-scroll-to', ssr: false },
+    { src: '~/plugins/slider', ssr: false },
+  ],
   components: true,
   buildModules: ['@nuxtjs/eslint-module'],
   modules: ['@nuxtjs/axios'],
