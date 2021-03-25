@@ -15,17 +15,18 @@ import BlockPage from '@/components/common/BlockPage'
 
 export default {
   components: { Header, BlockPage, Footer },
-  mounted(){
-    this.timer = setInterval(this.iframeHeightNotify,300)
+  mounted() {
+    this.timer = setInterval(this.iframeHeightNotify, 300)
   },
   beforeDestroy() {
-    clearInterval(this.timer);
+    clearInterval(this.timer)
   },
-  methods:{
+  methods: {
     iframeHeightNotify() {
       const msg = {
-        height: this.$refs.container.scrollHeight
+        height: this.$refs.container.scrollHeight,
       }
+      console.log(msg.height)
       window.parent.postMessage(msg, '*')
     },
   },
