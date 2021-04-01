@@ -1,9 +1,21 @@
 <template>
   <div class="slider-wrapper">
-    <div v-swiper:swiper="swiperOption" class="slider">
+    <div
+      v-swiper:swiper="swiperOption"
+      class="slider"
+      @slideChange="changeIndex()"
+    >
       <div class="swiper-wrapper">
         <!-- v-for="item in slides" -->
         <!-- :key="item.id" -->
+        <div
+          :style="{ backgroundImage: `url(/hero.jpg)` }"
+          class="swiper-slide"
+        />
+        <div
+          :style="{ backgroundImage: `url(/hero.jpg)` }"
+          class="swiper-slide"
+        />
         <div
           :style="{ backgroundImage: `url(/hero.jpg)` }"
           class="swiper-slide"
@@ -24,7 +36,7 @@ export default {
       slidesPerView: 1,
       spaceBetween: 30,
       grabCursor: true,
-      speed: 600,
+      speed: 800,
       keyboard: {
         enabled: true,
       },
@@ -32,9 +44,15 @@ export default {
         delay: 3000,
         disableOnInteraction: false,
       },
-      loop: true,
+      // loop: true,
     },
   }),
+  methods: {
+    changeIndex() {
+      this.active = this.swiper.activeIndex
+      this.$emit('slideChange', this.active)
+    },
+  },
 }
 </script>
 
