@@ -20,6 +20,14 @@
           :style="{ backgroundImage: `url(/hero.jpg)` }"
           class="swiper-slide"
         />
+        <div
+          :style="{ backgroundImage: `url(/hero.jpg)` }"
+          class="swiper-slide"
+        />
+        <div
+          :style="{ backgroundImage: `url(/hero.jpg)` }"
+          class="swiper-slide"
+        />
       </div>
     </div>
   </div>

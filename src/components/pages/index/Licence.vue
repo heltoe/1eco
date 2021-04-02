@@ -5,26 +5,18 @@
       <div class="file-element">
         <p class="title-file">Название файла</p>
         <img src="/hero.jpg" class="preview-file" alt="file" />
-        <div class="download-file">
+        <a href="/Благодарственное_письмо_от_Хартии.docx" class="download-file">
           <p class="download-file__text">Скачать документ</p>
           <img src="/download.svg" alt="download" class="download-file__icon" />
-        </div>
+        </a>
       </div>
       <div class="file-element">
         <p class="title-file">Название файла</p>
         <img src="/hero.jpg" class="preview-file" alt="file" />
-        <div class="download-file">
+        <a href="/Благодарственное_письмо_от_Храма.pdf" class="download-file">
           <p class="download-file__text">Скачать документ</p>
           <img src="/download.svg" alt="download" class="download-file__icon" />
-        </div>
-      </div>
-      <div class="file-element">
-        <p class="title-file">Название файла</p>
-        <img src="/hero.jpg" class="preview-file" alt="file" />
-        <div class="download-file">
-          <p class="download-file__text">Скачать документ</p>
-          <img src="/download.svg" alt="download" class="download-file__icon" />
-        </div>
+        </a>
       </div>
     </div>
   </div>
@@ -80,6 +72,7 @@ export default {
   margin-top: 10px;
   justify-content: space-between;
   cursor: pointer;
+  outline: none;
 }
 .download-file__text {
   font-weight: 500;

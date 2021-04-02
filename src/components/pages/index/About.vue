@@ -2,15 +2,11 @@
   <div id="about">
     <TitleBlock>О компании</TitleBlock>
     <div class="content">
-      <p class="text">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet nihil
-        blanditiis animi, deleniti molestias culpa nisi! Ipsum quod, possimus
-        ipsam quisquam placeat tempora quas ipsa dicta eveniet accusantium
-        reprehenderit totam! Lorem ipsum dolor sit, amet consectetur
-        adipisicing. Amet nihil blanditiis animi, deleniti molestias culpa nisi!
-        Ipsum quod, possimus ipsam quisquam placeat tempora quas ipsa dicta
-        eveniet accusantium reprehenderit totam!
-      </p>
+      <ul class="wrapper-text">
+        <li v-for="item in textInfo" :key="item.id" class="text">
+          {{ item.text }}
+        </li>
+      </ul>
       <img src="/hero.jpg" alt="about" class="image" />
     </div>
   </div>
@@ -21,6 +17,50 @@ import TitleBlock from '@/components/common/TitleBlock'
 
 export default {
   components: { TitleBlock },
+  data: () => ({
+    textInfo: [
+      {
+        id: 1,
+        text:
+          'Услуги оказываются с соблюдением всех нормативно-правовых актов РФ, города Москвы и других субъектов РФ.',
+      },
+      {
+        id: 2,
+        text: `
+          Основными заказчиками в разные года являлись: РЖД, ООО «Хартия», АО «Арктика» (группа ПИК), Сергиево-Посадский региональный оператор, ООО «МСК-НТ», магазины Авоська, ГУП города Москвы «ЭВАЖД» и другие частные и государственные, муниципальные предприятия и учреждения.
+        `,
+      },
+      {
+        id: 3,
+        text:
+          'Штатная численность Группы компаний «ЭКО» составляет более 80 человек.',
+      },
+      {
+        id: 4,
+        text: `
+          Высококвалифицированные специалисты Группы компаний «ЭКО», на основании разрешенных видов деятельности (ОКВЭД 7022), проводят консультирование физических и юридических лиц по вопросам коммерческой деятельности и управления в сфере обращения с отходами.
+        `,
+      },
+      {
+        id: 5,
+        text: `
+          Для оперативного решения возникающих вопросов, связанных с деятельностью группы компании, а также приема заявок на оказание услуг, находящихся в её компетенции создана информационно-диспетчерская служба. Дежурные диспетчеры быстро и качественно реагируют на все поступающие обращения.  
+        `,
+      },
+      {
+        id: 6,
+        text: `
+          Профессионализм сотрудников Группы компании «ЭКО» позволяет оказывать услуги удовлетворяющие высокие требования Заказчиков – качественно и в установленный срок.
+        `,
+      },
+      {
+        id: 7,
+        text: `
+          За все время работы, в сфере обращения с отходами, нареканий и  штрафных санкций со стороны Заказчиков Группы компаний «ЭКО» не поступало.
+        `,
+      },
+    ],
+  }),
 }
 </script>
 
@@ -35,11 +75,16 @@ export default {
   justify-content: space-between;
   margin-top: 20px;
 }
-.text {
+.wrapper-text {
   margin-right: 20px;
+}
+.text {
   max-width: 500px;
   font-size: 16px;
   line-height: 1.2;
+  &:not(:first-child) {
+    margin-top: 10px;
+  }
 }
 .image {
   height: 200px;

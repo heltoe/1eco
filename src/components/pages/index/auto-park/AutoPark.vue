@@ -32,37 +32,31 @@ export default {
       {
         id: 0,
         text: `
-          1Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet nihil
-          blanditiis animi, deleniti molestias culpa nisi! Ipsum quod, possimus
-          ipsam quisquam placeat tempora quas ipsa dicta eveniet accusantium
-          reprehenderit totam! Lorem ipsum dolor sit, amet consectetur
-          adipisicing. Amet nihil blanditiis animi, deleniti molestias culpa
-          nisi! Ipsum quod, possimus ipsam quisquam placeat tempora quas ipsa
-          dicta eveniet accusantium reprehenderit totam!
+          Автотранспортный парк, эксплуатируемый группой компаний «ЭКО», насчитывает 17 единиц мусоровозного спецтранспорта и состоит из: Мусоровозов с задней загрузкой, Портальных мусоровозов, Бункеровозов, Мультилифтов, Передвижной технички.
         `,
       },
       {
         id: 1,
         text: `
-          2Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet nihil
-          blanditiis animi, deleniti molestias culpa nisi! Ipsum quod, possimus
-          ipsam quisquam placeat tempora quas ipsa dicta eveniet accusantium
-          reprehenderit totam! Lorem ipsum dolor sit, amet consectetur
-          adipisicing. Amet nihil blanditiis animi, deleniti molestias culpa
-          nisi! Ipsum quod, possimus ipsam quisquam placeat tempora quas ipsa
-          dicta eveniet accusantium reprehenderit totam!
+          Навесное оборудование эксплуатируемого спецтранспорта таких фирм-производителей, как Geesinknorba, McNeilus, Faun размещены на шасси автомобильных концернов Volvo и MAN - 95% от общего количества и 5% на шасси отечественного производителя – КамАЗ и МАЗ.
         `,
       },
       {
         id: 2,
         text: `
-          3Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet nihil
-          blanditiis animi, deleniti molestias culpa nisi! Ipsum quod, possimus
-          ipsam quisquam placeat tempora quas ipsa dicta eveniet accusantium
-          reprehenderit totam! Lorem ipsum dolor sit, amet consectetur
-          adipisicing. Amet nihil blanditiis animi, deleniti molestias culpa
-          nisi! Ipsum quod, possimus ipsam quisquam placeat tempora quas ipsa
-          dicta eveniet accusantium reprehenderit totam!
+          Весь спецтранспорт соответствует стандартам Евро-4 и Евро-5, оснащен системой глобального позиционирования «ГЛОНАСС» и видиорегистраторами с целью передачи, в режиме реального времени, данных о своевременном и качественном оказании услуг в информационные системы заказчиков.
+        `,
+      },
+      {
+        id: 3,
+        text: `
+          Имеется возможность оперативно привлечь дополнительную технику до 30 ед. от компаний-партнеров (суммарный парк более 100 ед. спецтехники и механизмов, в том числе погрузчики, илососы и самосвалы). 
+        `,
+      },
+      {
+        id: 4,
+        text: `
+          На территории автобазы группы компаний «ЭКО», расположена ремзона, оборудованная смотровыми ямами, подъемниками и т.д.  Вся имеющаяся мусоровозная техника проходит профилактические осмотры перед выходом на маршруты. Неисправные автомобили в рейс не выпускаются. Все водители и грузчики перед выходом в рейс, а также рабочий персонал проходят обязательное медицинское освидетельствование.
         `,
       },
     ],
