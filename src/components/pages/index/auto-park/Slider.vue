@@ -9,23 +9,23 @@
         <!-- v-for="item in slides" -->
         <!-- :key="item.id" -->
         <div
-          :style="{ backgroundImage: `url(/hero.jpg)` }"
+          :style="{ backgroundImage: `url(/cars/slide1.jpg)` }"
           class="swiper-slide"
         />
         <div
-          :style="{ backgroundImage: `url(/hero.jpg)` }"
+          :style="{ backgroundImage: `url(/cars/slide2.png)` }"
           class="swiper-slide"
         />
         <div
-          :style="{ backgroundImage: `url(/hero.jpg)` }"
+          :style="{ backgroundImage: `url(/cars/slide3.jpg)` }"
           class="swiper-slide"
         />
         <div
-          :style="{ backgroundImage: `url(/hero.jpg)` }"
+          :style="{ backgroundImage: `url(/cars/slide4.jpg)` }"
           class="swiper-slide"
         />
         <div
-          :style="{ backgroundImage: `url(/hero.jpg)` }"
+          :style="{ backgroundImage: `url(/cars/slide5.png)` }"
           class="swiper-slide"
         />
       </div>
@@ -84,9 +84,8 @@ export default {
   flex-shrink: 0;
   border-radius: 5px;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-color: grey;
   width: 100%;
   height: 100%;
 }
