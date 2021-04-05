@@ -77,6 +77,7 @@ export default {
 }
 .wrapper-text {
   margin-right: 20px;
+  list-style: disc;
 }
 .text {
   max-width: 500px;
