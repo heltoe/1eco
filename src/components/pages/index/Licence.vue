@@ -3,17 +3,37 @@
     <TitleBlock>Лицензии и документы</TitleBlock>
     <div class="content">
       <div class="file-element">
-        <p class="title-file">Название файла</p>
+        <p class="title-file">Лицензия с прил. 1-ЭКО</p>
         <img src="/hero.jpg" class="preview-file" alt="file" />
-        <a href="/Благодарственное_письмо_от_Хартии.docx" class="download-file">
+        <a
+          href="/Лицензия_с_прил_1-ЭКО.pdf"
+          target="_blank"
+          class="download-file"
+        >
           <p class="download-file__text">Скачать документ</p>
           <img src="/download.svg" alt="download" class="download-file__icon" />
         </a>
       </div>
       <div class="file-element">
-        <p class="title-file">Название файла</p>
+        <p class="title-file">Благодарственное письмо от Хартии</p>
         <img src="/hero.jpg" class="preview-file" alt="file" />
-        <a href="/Благодарственное_письмо_от_Храма.pdf" class="download-file">
+        <a
+          href="/Благодарственное_письмо_от_Хартии.docx"
+          target="_blank"
+          class="download-file"
+        >
+          <p class="download-file__text">Скачать документ</p>
+          <img src="/download.svg" alt="download" class="download-file__icon" />
+        </a>
+      </div>
+      <div class="file-element">
+        <p class="title-file">Благодарственное письмо от Храма</p>
+        <img src="/hero.jpg" class="preview-file" alt="file" />
+        <a
+          href="/Благодарственное_письмо_от_Храма.pdf"
+          target="_blank"
+          class="download-file"
+        >
           <p class="download-file__text">Скачать документ</p>
           <img src="/download.svg" alt="download" class="download-file__icon" />
         </a>

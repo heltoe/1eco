@@ -84,7 +84,7 @@ export default {
   cursor: pointer;
 }
 .hero-block {
-  background-image: url('/hero.jpg');
+  background-image: url('/hero1.jpg');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;

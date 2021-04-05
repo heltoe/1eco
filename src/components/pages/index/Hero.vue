@@ -14,25 +14,25 @@
 <style lang="scss" scoped>
 .hero {
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
   height: calc(100vh - 63.6px);
   width: 100%;
 }
 .text-block {
   border-radius: 5px;
-  background-color: #fff;
   padding: 20px;
   z-index: 10;
   position: relative;
   width: 100%;
-  max-width: 370px;
-  margin-bottom: 80px;
+  max-width: 640px;
 }
 p {
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 32px;
+  font-weight: bold;
   line-height: 1.2;
   width: 100%;
+  text-align: center;
+  color: #fff;
 }
 </style>
