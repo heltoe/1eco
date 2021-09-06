@@ -45,8 +45,8 @@ export default {
       },
       {
         id: 5,
-        scrollTo: '#contacts',
-        label: 'Контакты',
+        scrollTo: '#feedback',
+        label: 'Обратная связь',
       },
     ],
   }),

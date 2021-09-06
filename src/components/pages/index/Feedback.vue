@@ -1,6 +1,6 @@
 <template>
-  <div id="contacts">
-    <TitleBlock>О компании</TitleBlock>
+  <div id="feedback">
+    <TitleBlock>Обратная связь</TitleBlock>
     <div class="content">
       <form class="block" @submit.prevent="submit">
         <p class="title-block">Напишите нам</p>
@@ -80,7 +80,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#contacts {
+#feedback {
   display: flex;
   flex-direction: column;
   padding: 40px 0;

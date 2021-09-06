@@ -13,7 +13,7 @@
       <AutoPark />
     </BlockPage>
     <BlockPage colored>
-      <Contacts />
+      <Feedback />
     </BlockPage>
     <transition name="fade">
       <img
@@ -31,7 +31,7 @@ import Hero from '@/components/pages/index/Hero'
 import About from '@/components/pages/index/About'
 import Licence from '@/components/pages/index/Licence'
 import AutoPark from '@/components/pages/index/auto-park/AutoPark'
-import Contacts from '@/components/pages/index/Contacts'
+import Feedback from '@/components/pages/index/Feedback'
 import BlockPage from '@/components/common/BlockPage'
 import VueScrollTo from 'vue-scrollto'
 
@@ -41,7 +41,7 @@ export default {
     About,
     Licence,
     AutoPark,
-    Contacts,
+    Feedback,
     BlockPage,
   },
   data: () => ({
